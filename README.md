@@ -1,2 +1,39 @@
-# code-review-checklist
-My team code review checklist
+# Code review checklist
+- Be polite / friendly / honest / frank / humble
+- Are we introducing a CLEAN code?
+- The PR should be concentrated on a particular goal
+  - If the goal of a PR is **NOT** clear to reviewers, arrange an over-shoulder code review session
+- The PR should be **LESS** than `400` lines of code
+- Design patterns?
+- JIRA ticket mentioned?
+- Code formatting & static code analysis:
+  - SonarQube checks passed?
+  - Is IntelliJIDEA code formatter applied?
+- DRY / YAGNI / SOLID?
+- Is it the right layer of an architecture? Should this fix be dumped somewhere in a better place?
+- Any best practices we can use to do the same thing?
+- Commit message is EXTREMELY important
+- Non-functional requirements:
+  - Readability
+  - Security
+  - Performance
+  - Deployment
+  - Documentation
+  - Portability
+- Ask good questions & don't make demands (e.g. "What do you think about naming this `:user_id?`")
+- Always be patient and relook if required
+- What kind of troubles we are going to introduce with this fix / PR?
+- Tests:
+  - Do we have tests that cover an introduced functionality?
+  - Is it enough to have only unit tests in this case? End-to-end tests? Integration tests? UI tests?
+- Backward compatibility
+- If you introduce a brand new dependency check that it is NOT introduced by somebody before you
+  - Check the shared / parent POM-s & projects
+  - Transitive dependencies
+- Sign off on the pull request with a 👍 / LGTM / "Ready to be merged" comment
+
+## Articles used
+- https://www.evoketechnologies.com/blog/code-review-checklist-perform-effective-code-reviews/
+- https://medium.com/palantir/code-review-best-practices-19e02780015f
+- https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/
+- https://medium.engineering/the-code-review-mindset-3280a4af0a89
